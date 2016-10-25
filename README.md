@@ -1,6 +1,6 @@
 # \<xenon-i18next\>
 
-Internationalization polymer component based on the i18next library
+Internationalization polymer component based on the i18next library (WORK IN PROGRESS!...)
 
 ## Install the Polymer-CLI
 
