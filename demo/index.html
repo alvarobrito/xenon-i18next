@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <title>xenon-i18next demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+
+    <link rel="import" href="../xenon-i18next.html">
+    <link rel="import" href="sample-with-behavior.html">
+
+    <style is="custom-style" include="demo-pages-shared-styles">
+    </style>
+  </head>
+  <body>
+
+    <div class="vertical-section-container centered">
+      <h3>Basic xenon-i18next Demo</h3>
+      <demo-snippet>
+        <xenon-i18next options='{"lng": "en", "resources": { "en": { "translation": { "hw": "hello world" }}}}'></xenon-i18next>
+        <template>
+          <sample-with-behavior></sample-with-behavior>
+        </template>
+      </demo-snippet>
+    </div>
+
+  </body>
+</html>

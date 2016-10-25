@@ -1,0 +1,46 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+`xenonI18nextBehavior`
+A polymer component to do localization (i18n)
+-->
+
+<script>
+
+  xenonI18nextBehavior = {
+
+    properties: {
+      key: {
+        type: 'String',
+        value: null
+      },
+
+      options: {
+        type: Object,
+        value: undefined
+      },
+
+      translate: {
+        type: Function,
+        computed: '_computeTranslateFn(translationService)'
+      },
+
+      translationService: {
+        type: Function,
+        value: function() {
+          return function(key, options) {
+            return Polymer.Base.$$('xenon-i18next').translate(key, options);
+          };
+        }
+      }
+
+    },
+
+    _computeTranslateFn: function(ts) {
+      return function(key, options) {
+        return ts(key, options);
+      }
+    }
+
+  };
+</script>

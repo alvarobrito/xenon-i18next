@@ -1,0 +1,41 @@
+<link rel="import" href="../polymer/polymer.html">
+<script src="../i18next/i18next.min.js"></script>
+
+<!--
+`xenon-i18next`
+Internationalization polymer component based on the i18next library
+
+@demo demo/index.html
+-->
+
+<dom-module id="xenon-i18next">
+  <template>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'xenon-i18next',
+
+      properties: {
+        options: {
+          type: Object,
+          value: undefined
+        }
+      },
+
+      ready: function () {
+        this.initialize(this.get('options'));
+      },
+
+      initialize: function (options/*, cb */) {
+        return i18next.init(options, Array.prototype.slice.call(arguments, 1)[0] || function(){});
+      },
+
+      translate: function (key, options) {
+        return i18next.t(key, options);
+      }
+
+    });
+  </script>
+</dom-module>
